@@ -1,21 +1,100 @@
-try:
-	a = int(input('A: '))
-	sign = input('Sign: ')
-	b = int(input('B: '))
-	if sign == '/' and b == 0:
-		raise ZeroDivisionError
-	if sign != '+' and sign != '-' and sign!='*' and sign!='/':
-		raise Warning
-	elif sign == '+':
-		print(f"{a} + {b} = {a+b}")
-except ValueError:
-	print('You need to input digits!')
-except ZeroDivisionError:
-	print('Go to school')
-except Warning:
-	print('Unknown sign')
-except:
-	print('Error!')
+def happy(func):
+	def wrapper():
+		print('I am happy')
+		func()
+	return wrapper
+# Добавить 10 декораторов, которые будут описывать человека (внешность, характер, работа)
+	
+@happy
+def human():
+	print('I am human')
+	
+human()
+# import time
+# import requests
+# def timer(func):
+# 	def wrapper():
+# 		start = time.time()
+# 		func()
+# 		end = time.time()
+# 		print('Time: ', end-start)
+# 	return wrapper
+
+# def logging(func):
+# 	def wrapper():
+# 		func()
+# 		print('Function worked')
+# 	return wrapper
+
+# count = 0
+# def counter(func):
+# 	def wrapper():
+# 		global count
+# 		count += 1
+# 		func()
+# 		print('Count:', count)
+# 	return wrapper
+
+# @counter
+# @logging
+# @timer
+# def web():
+# 	page = requests.get('https://github.com/AnastasiaLusta/Python_C2928')
+# 	print(page.text)
+
+# web()
+# web()
+# web()
+# def decor(func):
+# 	def wrapper():
+# 		print('This is my decorator')
+# 		func()
+# 		print('The end of my decorator')
+# 	return wrapper
+
+# @decor
+# def f1():
+# 	print('I am function!')
+
+# @decor
+# def f2():
+# 	print('Hello')
+
+# f1()
+# f2()
+
+
+
+
+
+
+
+
+
+
+
+
+# try:
+# 	a = int(input('A: '))
+# 	sign = input('Sign: ')
+# 	b = int(input('B: '))
+# 	if sign == '/' and b == 0:
+# 		raise ZeroDivisionError
+# 	if sign != '+' and sign != '-' and sign!='*' and sign!='/':
+# 		raise Warning
+# 	elif sign == '+':
+# 		print(f"{a} + {b} = {a+b}")
+# except ValueError:
+# 	print('You need to input digits!')
+# except ZeroDivisionError:
+# 	print('Go to school')
+# except Warning:
+# 	print('Unknown sign')
+# except:
+# 	print('Error!')
+# # 1) В начале спросить пользователя, как его зовут (предусмотреть все исключительные ситуации)
+# # 2) Добавить остальные знаки
+# # 3) Если в процессе должны возникнуть какие-то исключительные ситуации, то их тоже обработать
 
 
 
